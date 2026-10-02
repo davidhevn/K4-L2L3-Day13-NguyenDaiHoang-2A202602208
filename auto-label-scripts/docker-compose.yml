@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  openpcdet_labeler_v2:
+    build: .
+    container_name: openpcdet_auto_label_v2
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - .:/workspace
